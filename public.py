@@ -14,7 +14,7 @@ a = soup.findAll("div", {"class" : "col-sm-6 col-lg-4"})
 filename = "games.csv"
 
 with open(filename, "w") as f:
-    headers = "NAME, PRICE, AVAILABILITY, LINK\n"
+    headers = "NAME; PRICE; AVAILABILITY; LINK\n"
     f.write(headers)
     for link in a:
 
@@ -28,5 +28,5 @@ with open(filename, "w") as f:
         print(price)
         print(dia8esimothta)
         print(address)
-        f.write(name + "," + price + "," + dia8esimothta + "," + address + "\n")
+        f.write(name + ";" + price + ";" + dia8esimothta + ";" + address + "\n")
 
