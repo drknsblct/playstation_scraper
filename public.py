@@ -42,7 +42,7 @@ if __name__ == '__main__':
             for i in range(len(urls)):
                 url = urls[i]
                 filename = csv_filenames[i]
-                print('Writing Playstation games to csv...')
+                print(f'Writing {csv_filenames[i]}...')
                 r = requests.get(url)
                 html_content = r.text
                 soup = BeautifulSoup(html_content, 'lxml')
@@ -54,7 +54,7 @@ if __name__ == '__main__':
             print('Choose either PS4 or PS5!\n')
             continue
 
-    if choice != 'both':
+    if choice != 3:
         r = requests.get(url)
         html_content = r.text
         soup = BeautifulSoup(html_content, 'lxml')
