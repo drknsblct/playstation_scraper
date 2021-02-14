@@ -24,18 +24,21 @@ if __name__ == '__main__':
     csv_filenames = ['ps4_games.csv', 'ps5_games.csv']
 
     while True:
-        choice = input('List of games for [PS4], [PS5] or [both]? ')
-        if choice.strip().lower() == 'ps4':
+        print('[1] PS4')
+        print('[2] PS5')
+        print('[3] both')
+        choice = int(input('Choice: '))
+        if choice == 1:
             url = urls[0]
             filename = csv_filenames[0]
             print('Writing PS4 games to csv...')
             break
-        elif choice.strip().lower() == 'ps5':
-            url = urls[0]
+        elif choice == 2:
+            url = urls[1]
             filename = csv_filenames[1]
             print('Writing PS5 games to csv...')
             break
-        elif choice.strip().lower() == 'both':
+        elif choice == 3:
             for i in range(len(urls)):
                 url = urls[i]
                 filename = csv_filenames[i]
