@@ -26,7 +26,7 @@ if __name__ == '__main__':
     while True:
         print('[1] PS4')
         print('[2] PS5')
-        print('[3] both')
+        print('[3] PS4/PS5')
         choice = int(input('Choice: '))
         if choice == 1:
             url = urls[0]
@@ -52,7 +52,6 @@ if __name__ == '__main__':
             break
         else:
             print()
-            continue
 
     if choice != 3:
         r = requests.get(url)
