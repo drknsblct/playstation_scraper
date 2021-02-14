@@ -51,7 +51,7 @@ if __name__ == '__main__':
             print('Done')
             break
         else:
-            print('Choose either PS4 or PS5!\n')
+            print()
             continue
 
     if choice != 3:
